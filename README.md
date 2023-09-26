@@ -4,11 +4,11 @@
 This ongoing project uses the MERN stack and is secured with JWT-Based User Authentication and Authorization. This project will allow me, as a developer, to learn about the MERN stack. I also decided to create a note-taking app for D&D, as I couldn't find one I liked. 
 
 ## Features
-- User can log in and/or register
-- User can create/edit/delete notes
-- Notes will have categories and/or tags (e.g. campaigns, music, images, characters, etc.)
-- Notes can be linked together
-- User can switch between GM or Player mode
+- [x] User can log in and/or register
+- [ ] User can create/edit/delete notes
+- [ ] Notes will have categories and/or tags (e.g. campaigns, music, images, characters, etc.)
+- [ ] Notes can be linked together
+- [ ] User can switch between GM or Player mode
 
 ## Tech Stack
 - `Server`
