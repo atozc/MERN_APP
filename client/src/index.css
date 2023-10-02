@@ -76,7 +76,7 @@ body {
 }
 
 .form_container button:hover {
-  background-color: rgba(0, 212, 255, 1);
+  background-color: rgb(0, 212, 255, 1);
 }
 
 span a {
