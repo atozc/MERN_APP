@@ -7,7 +7,7 @@ This ongoing project uses the MERN stack and is secured with JWT-Based User Auth
 ## Features
 
 - [x] User can log in and/or register -> [![Check it out](https://drive.google.com/file/d/1c8KiEGJxOS35VRPqJJKKeVQuQw1u9g3t/view?usp=sharing)](https://drive.google.com/file/d/1qmtEsbxtg1KY1vlw8BO5UazxY4R_usBi/view?usp=sharing)
-- [ ] User can create/read/update/delete notes (CRUD Operations)
+- [x] User can create/read/update/delete notes (CRUD Operations)
 - [ ] Notes will have categories and/or tags (e.g. campaigns, music, images, characters, etc.)
 - [ ] Notes can be linked together
 - [ ] User can switch between GM or Player mode
