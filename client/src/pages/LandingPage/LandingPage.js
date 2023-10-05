@@ -12,7 +12,7 @@ const LandingPage = () => {
                 <Row>
                     <div className='intro-text'>
                         <div>
-                            <h1 className='title'>Welcome to Notes App</h1>
+                            <h1 className='title'>Welcome to Crit Notes!</h1>
                         </div>
                     </div>
                 </Row>

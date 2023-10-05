@@ -3,20 +3,25 @@
     flex-direction: column;
     margin: 20px;
     align-items: center;
+    background-color: #ffffff;
 }
 
 .formStyles {
     width: 400px;
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
 }
-
 
 .submitButton {
     background-color: rgb(111, 118, 194);
-    padding: 8px;
-    color: #ffffff;
-    font-size: large;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border-radius: 2rem;
+    transition: ease-in 0.3s;
     border: none;
 }
 

@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import LandingPage from './pages/Home';
+import HomePage from './pages/Home';
 import LoginScreen from './pages/Login';
 import RegisterScreen from './pages/Signup';
 import MyNotes from './pages/MyNotes/MyNotes'
@@ -16,7 +16,7 @@ function App() {
         <Header />
           <main>
               <Routes>
-                <Route path="/" element={<LandingPage/>}/>
+                <Route path="/" element={<HomePage/>}/>
                 <Route path="/login" element={<LoginScreen/>} />
                 <Route path="/signup" element={<RegisterScreen/>} />
                 <Route path="/mynotes" element={<MyNotes/>} />
