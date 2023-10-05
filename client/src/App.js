@@ -1,24 +1,24 @@
-import './App.css';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import HomePage from './pages/Home';
-import LoginScreen from './pages/Login';
-import RegisterScreen from './pages/Signup';
-import MyNotes from './pages/MyNotes/MyNotes'
+import { Route, Routes } from "react-router-dom";
+import { Login, Signup } from "./pages";
+import Home from "./pages/Home";
+import NavbarPage from "./components/Navbar/Navbar";
+import MyNotes from "./pages/MyNotes/MyNotes";
 import CreateNote from './pages/CreateNote/CreateNote';
 import EditNote from './pages/EditNote/EditNote';
-import {Route, Routes} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
 
 function App() {
   return (
-      <>
-        <Header />
+     <>
+        <NavbarPage />
           <main>
               <Routes>
-                <Route path="/" element={<HomePage/>}/>
-                <Route path="/login" element={<LoginScreen/>} />
-                <Route path="/signup" element={<RegisterScreen/>} />
+                <Route path="/" element={<Home/>}/>
+                <Route path="/login" element={<Login/>} />
+                <Route path="/signup" element={<Signup/>} />
                 <Route path="/mynotes" element={<MyNotes/>} />
                 <Route path="/mynotes/createNote" element={<CreateNote/>} />
                 <Route path="/mynotes/editNote/:noteid" element={<EditNote/>} />

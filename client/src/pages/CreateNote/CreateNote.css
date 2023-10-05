@@ -1,3 +1,7 @@
+#root {
+    height: 100%;
+}
+
 .createContainer {
     display: flex;
     flex-direction: column;

@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+#root {
+  height: 100%;
+}
+
 label {
   font-size: 1.2rem;
   color: #656262;
@@ -90,7 +94,7 @@ span a {
   background: rgb(34, 43, 43);
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   text-transform: uppercase;
   font-size: 3rem;
