@@ -11,6 +11,7 @@ This ongoing project uses the MERN stack and is secured with JWT-Based User Auth
 - [ ] Notes will have categories and/or tags (e.g. campaigns, music, images, characters, etc.)
 - [ ] Notes can be linked together
 - [ ] User can switch between GM or Player mode
+- [ ] Add a CI/CD pipeline 
 
 ## Tech Stack
 
