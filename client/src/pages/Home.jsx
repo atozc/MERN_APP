@@ -37,7 +37,7 @@ const Home = () => {
       <div className="home_page">
         <h4>
           {" "}
-          Welcome <span>{username}</span>
+          Welcome to <span>Crit Notes!</span>
         </h4>
         <button onClick={Logout}>LOGOUT</button>
       </div>

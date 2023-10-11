@@ -24,7 +24,7 @@ const Login = () => {
     });
   const handleSuccess = (msg) =>
     toast.success(msg, {
-      position: "top-right",
+      position: "bottom-left",
     });
 
   const handleSubmit = async (e) => {
