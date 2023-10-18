@@ -37,4 +37,3 @@ app.use("/", authRoute);
 app.use("/", noteRoute)
 
 
-

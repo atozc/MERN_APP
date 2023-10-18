@@ -1,0 +1,23 @@
+.container-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 10px;
+    background-color: rgb(87, 204, 153);
+    color: #CBF3D2;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: rgba(0, 212, 255, 1);
+}

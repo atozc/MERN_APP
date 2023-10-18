@@ -3,7 +3,7 @@ const asyncHandler = require("express-async-handler");
 
 const getAllUserNotes = asyncHandler(async (req,res) => {
     const notes = await Note.find({ user: req.params.userId });
-    res.json({ notes });
+    res.json(notes);
 });
 
 const createNote = asyncHandler(
