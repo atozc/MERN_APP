@@ -4,10 +4,10 @@ import { Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import ErrorMessage from '../../components/ErrorMessage';
 import Loading from '../../components/Loading';
-import MainScreen from '../../components/MainScreen';
+import Home from '../Home';
 import './CreateNote.css';
 import { toast } from 'react-toastify';
-import '../../toastifyCustomStyles.css';
+import './../../toastifyCustomStyles.css';
 
 const CreateNote = () => {
 
@@ -16,6 +16,7 @@ const CreateNote = () => {
     const [category,setCategory] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
+    const baseUrl = "http://localhost:4000/";
 
     const navigation = useNavigate();
 
@@ -34,7 +35,8 @@ const CreateNote = () => {
                 // console.log(userData._id);
                 
                 setLoading(true)
-                const { data } = await axios.post(`/api/notes/create/${userData._id}`,{
+                ///
+                const { data } = await axios.post(`${baseUrl}api/notes/create/${userData._id}`,{
                     title,
                     content,
                     category,
@@ -48,20 +50,19 @@ const CreateNote = () => {
                 navigation('/mynotes');
 
         } catch (error) {
-            setError(error.response.data.message);
             setLoading(false);
+            setError(error.response.data.message);
         }
     }
 
     return(
-        <MainScreen title='Create Note'>
+        <Home title='Create Note'>
             <div className='createContainer'>
             {error && <ErrorMessage variant='danger'>{error}</ErrorMessage>}
             {loading && <Loading></Loading>}
             <Form onSubmit={formSubmitHandler} className='formStyles' >
                 <Form.Group className="mb-3" controlId="title">
-                        <Form.Label>Title</Form.Label>
-                        <br></br>
+                    <Form.Label>Title</Form.Label>
                     <Form.Control
                         required 
                         type="text"
@@ -70,8 +71,7 @@ const CreateNote = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="category">
-                        <Form.Label>Category</Form.Label>
-                        <br></br>
+                    <Form.Label>Category</Form.Label>
                     <Form.Control
                         required 
                         type="text" 
@@ -80,8 +80,7 @@ const CreateNote = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="content">
-                        <Form.Label>Content</Form.Label>
-                        <br></br>
+                    <Form.Label>Content</Form.Label>
                     <Form.Control
                         as="textarea" 
                         rows={7}
@@ -91,7 +90,7 @@ const CreateNote = () => {
                         onChange={(e) => {setContent(e.target.value)}} />
                 </Form.Group>
                 <div className='btnSection'>
-                    <button className='cancelButton' onClick={() => {navigation('/mynotes')}}>
+                    <button className='goBackButton' onClick={() => {navigation('/mynotes')}}>
                         Cancel
                     </button>
                     <button type="submit" className='submitButton'>
@@ -100,7 +99,7 @@ const CreateNote = () => {
                 </div>
             </Form>
             </div>
-        </MainScreen>
+        </Home>
     )
 }
 

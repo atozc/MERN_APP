@@ -15,9 +15,11 @@ const MyNotes = () => {
 
     const [notes,setNotes] = useState([]);
     const [error, setError] = useState(false);
+    const baseUrl = "http://localhost:4000/";
+
 
     const deleteHandler = async(id) => {
-          const {data} = await axios.delete(`/api/notes/delete/${id}`);
+          const {data} = await axios.delete(`${baseUrl}api/notes/delete/${id}`);
           console.log(data);
           toast.success("Note Deleted", {
             position: toast.POSITION.TOP_RIGHT,
@@ -31,7 +33,7 @@ const MyNotes = () => {
 
     const fetchNotes = async() => {
         try{
-            const {data} = await axios.get(`/api/notes/${userData._id}`);
+            const {data} = await axios.get(`${baseUrl}api/notes/${userData._id}`);
                 setNotes(data);
         }catch(error){
             setError(error.response.data.message);

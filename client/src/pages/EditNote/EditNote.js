@@ -7,7 +7,7 @@ import ErrorMessage from '../../components/ErrorMessage';
 import Loading from '../../components/Loading';
 import "./EditNote.css";
 import { toast } from 'react-toastify';
-import '../../toastifyCustomStyles.css';
+import './../../toastifyCustomStyles.css';
 
 const EditNote = () => {
 
@@ -20,10 +20,12 @@ const EditNote = () => {
     const [category,setCategory] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
+    const baseUrl = "http://localhost:4000/";
+
 
     // Firstly get the original note
     const getNote = async () => {
-        const {data} = await axios.get(`/api/notes/getnote/${params.noteid}`)
+        const {data} = await axios.get(`${baseUrl}api/notes/getnote/${params.noteid}`)
         
         setTitle(data.title);
         setContent(data.content);
@@ -40,7 +42,7 @@ const EditNote = () => {
                 }
 
                 setLoading(true);
-                const { data } = await axios.put(`/api/notes/update/${params.noteid}`,{
+                const { data } = await axios.put(`${baseUrl}api/notes/update/${params.noteid}`,{
                     title,
                     content,
                     category
@@ -55,13 +57,12 @@ const EditNote = () => {
                   });
                 navigation('/mynotes');
         } catch (error) {
-            console.log(error);
             setLoading(false)
             setError(error.response.data.message);
         }
     }
 
-    useEffect(() =>{
+    useEffect(() =>{        
         getNote();
     },[params.noteid])
 
